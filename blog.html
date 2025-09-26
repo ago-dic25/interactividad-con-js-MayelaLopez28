@@ -3,70 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Spot</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+    <title>BlogSpot - Magazine Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilos.css">
-    <!--<script src="https://kit.fontawesome.com/6d11003e79.js" crossorigin="anonymous"></script>-->
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="">
-        <nav>
-            
-            <button id="menu">Menu</button>
-            <ul>
-                <li>
-                    <a href="#">Articles</a>
-                </li>
-                <li>
-                    <a href="#">Radio</a>
-                </li>
-                <li>
-                    <a href="#">Podcast</a>
-                </li>
-                 <li>
-                    <a href="#">Crear Cuenta / Registro</a>
-                </li>
-            </ul>
-            <button id="buscar">
-                Buscar
-            </button>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <div class="tarjeta" id="bestOfTheWeek">
-                <h1>Best of the week</h1>
-                <a href="#">See all posts</a>
+<div class="container">
+    <div class="navbar">
+        <div class="logo">BlogSpot</div>
+        <ul class="menu">
+            <li><a href="#">Articles <span class="count">(460)</span></a></li>
+            <li><a href="#">Radio <span class="count">(6)</span></a></li>
+            <li><a href="#">Podcast <span class="count">(46)</span></a></li>
+            <li><a href="#">Be a writer</a></li>
+            <li><a href="#">Talk to us</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search articles...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
             </div>
-            <div class="tarjeta" id="travel">
-                <span>Sep 06, 2022</span>
-                <button>Travel</button>
-                <img src="imagenes/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg" width="50%" alt="">
-                <div class="info">
-                    <span>Travel</span>
-                    <h2>TravelPro</h2>
+        </div>
+    </div>
+
+    <div class="header-section">
+        <h1>Best of the week</h1>
+        <a href="#" class="see-all">See all posts <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="articles-container">
+        <div class="grid">
+            <div class="main-article article-card">
+                <img src="https://images.unsplash.com/photo-1671531009361-8846ff0d7ae4?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" class="main-image" id="galleryImage">
+                <div class="article-content">
+                    <div class="article-date">Aug 22,2025</div>
+                    <div class="category">Travel</div>
+                </div>
+                <div class="article-title-container">
+                    <h2 class="article-title">Get to your dream destinations with Travel Pro</h2>
+                </div>
+                <a href="#" class="main-article-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="side-articles">
+                <div class="side-article article-card">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Music concert" class="side-image">
+                    <div class="side-content">
+                        <div class="category">Music</div>
+                        <h3 class="side-title">The Rise of Independent Artists in the Music Scene</h3>
+                        <a href="#" class="read-more">See all picks <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="side-article article-card">
+                    <img src="https://content.api.news/v3/images/bin/fc8411f76d6e1a48044ef56bc8c4a729?width=1024" class="side-image">
+                    <div class="side-content">
+                        <div class="category">Fashion</div>
+                        <h3 class="side-title">Autumn 2025 Trends: What's In and What's Out in Fashion</h3>
+                        <a href="#" class="read-more">See all picks <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
-        </section>
-        <aside>
-            <div class="tarjeta" id="ads">
-                <span>ADS</span>
-                <button>+</button>
-                <span>Become a podcaster</span>
-                <h3>Real talk</h3>
+        </div>
+    </div>
+
+    <div class="ads-section">
+        <div class="ad">
+            <span class="ad-tag">ADS</span>
+            <h3 class="ad-title">Become A BROADCAST MEMBER</h3>
+            <p class="ad-description">Real talk in a corporate world. Join our exclusive community of thought leaders.</p>
+            <div class="ad-actions">
+                <button class="like-button">👍🏼</button>
+                <span class="like-counter">0</span> Likes
             </div>
-            <div  class="tarjeta" id="seeAll">
-                <img src="imagenes/soundtrap-n30_i7mx62o-unsplash.jpg" alt="" width="50%">
-                <button>See all pics</button>
+            <a href="#" class="ad-button">Learn more</a>
+        </div>
+
+        <div class="ad">
+            <span class="ad-tag">ADS</span>
+            <h3 class="ad-title">Travel Pro</h3>
+            <p class="ad-description">Get to your dream destinations with our premium travel services and exclusive deals.</p>
+            <div class="ad-actions">
+                <button class="like-button">👍🏼</button>
+                <span class="like-counter">0</span> Likes
             </div>
-        </aside>
-    </main>
-</body>
+            <a href="#" class="ad-button">Explore now</a>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <a href="#" class="see-all" id="seeAll">See all picks <i class="fas fa-arrow-right"></i></a>
+    </div>
+</div>
+
 <script src="index.js"></script>
+</body>
 </html>
